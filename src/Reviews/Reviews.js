@@ -1,18 +1,22 @@
 import React, { useState } from "react";
+import "./Reviews.css";
 
-export const Reviews = () => {
+const Reviews = () => {
   return (
-    <div>
+    <div className="body">
       <div className="header">
         <h1>Leave a review and a picture of your favorite parks!</h1>
         <h1>signup/signin</h1>
       </div>
+      <br />
       <div className="reviewBody">
-        <div className="reviewNav">
-          Link to park pages Recommend a park(Link to our email)
+        <div id="reviewNav">
+          <p>Link to park pages</p>
+          <p>Recommend a park(Link to our email)</p>
         </div>
-        <div>window to view reviews</div>
+        <div id="reviewWindow">window to view reviews</div>
       </div>
+      <br />
       <div className="footer">
         <div id="reviewTextArea">
           <textarea></textarea>
@@ -26,3 +30,5 @@ export const Reviews = () => {
     </div>
   );
 };
+
+export default Reviews;
