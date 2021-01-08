@@ -2,20 +2,18 @@ import React from "react";
 import { NavLink, Route, Switch } from "react-router-dom";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import Home from "../home/Home";
 import Parks from "../parks/Parks";
 import Reviews from "../reviews/Reviews";
 import About from "../about/About";
 import Login from "../login/Login";
-import App from "../../App";
 import "../../App.css";
 import "./Navigation.css";
 
 const Navigation = () => {
   return (
     <>
-      <Navbar fixed='top' variant='dark' className='bg'>
+      <Navbar bg='dark'fixed='top' variant='dark' className='bg'>
         <Navbar.Brand className='brand'> On the Beaten Path </Navbar.Brand>
         <Nav className="ml-auto">
           <NavLink to='/' activeClassName='selected' exact={true} className="mr-3 nav-link">
