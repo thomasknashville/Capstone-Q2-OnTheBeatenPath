@@ -1,11 +1,13 @@
-import React from 'react';
+import React from "react";
+import Weather from "./weather/Weather";
 
 const Parks = () => {
   return (
     <>
-    <div> This is parks page </div>
+      This is the parks Page.
+      <Weather />
     </>
-  )
-}
+  );
+};
 
 export default Parks;
