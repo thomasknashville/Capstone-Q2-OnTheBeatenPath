@@ -1,7 +1,11 @@
 import "./App.css";
-import Navigation from "./components/Navigation";
+
 import Links from "./components/Links";
 import useAuth from "./hooks/useAuth";
+import logo from "./logo.svg";
+
+import Home from "./components/home/Home.js";
+import Navigation from "./components/navigation/Navigation";
 
 function App() {
   const auth = useAuth();
@@ -27,7 +31,6 @@ function App() {
         </div>
       )}
       <Navigation />
-      <Links />
     </div>
   );
 }

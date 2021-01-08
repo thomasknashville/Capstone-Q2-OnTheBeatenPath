@@ -9,7 +9,7 @@ export default function Navigation() {
   return (
     <Switch>
       <ConnectedRoute exact path="/" redirectIfAuthenticated component={Home} />
-      <ConnectedRoute exact isProtected path="/dashbaord" component={Dashboard} />
+      <ConnectedRoute exact isProtected path="/dashboard" component={Dashboard} />
       <ConnectedRoute path="*" component={NotFound} />
     </Switch>
   );

@@ -1,0 +1,17 @@
+.nav-link {
+  font-size: 2rem;
+}
+
+.selected {
+  color: gold !important;
+}
+
+.fx-margin {
+  margin: auto;
+  margin-top: 100px;
+}
+
+.navbar-brand {
+  font-size: 2.25rem !important;
+  font-family: "Oleo Script", cursive;
+}
