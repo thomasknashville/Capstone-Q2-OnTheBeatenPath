@@ -11,11 +11,6 @@ import Login from "../login/Login";
 import App from "../../App";
 import "../../App.css";
 import "./Navigation.css";
-import Reviews from "../reviews/Reviews";
-import Parks from "../parks/Parks";
-import About from "../about/About";
-import Home from "../home/Home";
-import Login from "../login/Login";
 
 const Navigation = () => {
   return (
