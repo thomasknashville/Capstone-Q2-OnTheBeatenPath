@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Navigation from "./components/Navigation";
+import Links from "./components/Links";
+import useAuth from "./hooks/useAuth";
 
 function App() {
+  const auth = useAuth();
+
+  function loginNow() {
+    const email = prompt("Please enter your email");
+    auth.login(email);
+  }
+  if (auth.loading || auth.loggingIn || auth.loggingOut) {
+    return "Loading....";
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {auth.loggedIn ? (
+        <div>
+          You are logged-in.
+          <br />
+          <button onClick={() => auth.logout()}>Logout</button>
+        </div>
+      ) : (
+        <div>
+          <button onClick={loginNow}>Login Now</button>
+        </div>
+      )}
+      <Navigation />
+      <Links />
     </div>
   );
 }
