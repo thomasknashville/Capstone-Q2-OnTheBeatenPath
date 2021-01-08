@@ -10,6 +10,7 @@ import About from "../about/About";
 import Login from "../login/Login";
 import App from "../../App";
 import "../../App.css";
+import "./Navigation.css";
 
 const Navigation = () => {
   return (
