@@ -2,18 +2,14 @@ import React from "react";
 import "./App.css";
 import { Switch, Route } from "react-router-dom";
 import Reviews from "./Reviews/Reviews";
-import Nav from "./Nav/Nav";
+import Home from "./components/home/Home.js";
+import Navigation from "./components/navigation/Navigation";
 
 function App() {
   return (
-    <React.Fragment>
-      <Nav />
-      <Switch>
-        <Route exact path="/" />
-        <Route path="/parks" />
-        <Route path="/reviews" component={Reviews} />
-      </Switch>
-    </React.Fragment>
+    <div className="App">
+      <Navigation />
+    </div>
   );
 }
 
