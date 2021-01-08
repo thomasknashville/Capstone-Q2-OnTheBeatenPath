@@ -1,9 +1,8 @@
 import React from "react";
 import "./Reviews.css";
-import PicUpload from "./reviewsComponents/PicUpload";
-import ReviewWindow from "./reviewsComponents/reviewWindow";
+import Footer from "./reviewsComponents/Footer";
+import ReviewWindow from "./reviewsComponents/ReviewWindow";
 import ReviewNav from "./reviewsComponents/ReviewNav";
-import ReviewTextArea from "./reviewsComponents/ReviewTextArea";
 
 const Reviews = () => {
   return (
@@ -18,8 +17,7 @@ const Reviews = () => {
       </div>
       <br />
       <div className="footer">
-        <ReviewTextArea />
-        <PicUpload />
+        <Footer />
       </div>
     </div>
   );

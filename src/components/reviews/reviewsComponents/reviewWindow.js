@@ -1,20 +1,25 @@
 import React, { useState, useEffect } from "react";
 
 const ReviewWindow = () => {
-  const [reviews, setReviews] = useState({});
+  const [reviews, setReviews] = useState([]);
 
-  const getReviews = async () => {
-    try {
-      const response = await fetch("/reviews");
-      const data = await response.json;
-      setReviews(data.results);
-    } catch (err) {
-      console.error("Unable to collect data requested", err);
-    }
-  };
+  useEffect(() => {
+    const getReviews = async () => {
+      try {
+        const response = await fetch("/api/me");
+        const data = await response.json;
+        setReviews(data.name);
+        console.log(JSON.parse(response.name));
+      } catch (err) {
+        console.error("Unable to collect data requested", err);
+      }
+    };
+    getReviews();
+  }, []);
+  //   console.log(reviews);
   return (
     <div id="reviewWindow">
-      <h1>window to view reviews</h1>
+      <p>{reviews.name}</p>
     </div>
   );
 };
