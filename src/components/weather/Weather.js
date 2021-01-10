@@ -10,19 +10,19 @@ function Weather() {
 
   useEffect(() => {
     fetch(
-      "https://api.openweathermap.org/data/2.5/weather?lat=" +
+      "https://api.openweathermap.org/data/2.5/onecall?lat=" +
         lat +
         "&lon=" +
         lon +
-        "&appid=" +
+        "&exclude=hourly,minutely&appid=" +
         key +
         "&units=imperial"
     )
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        setFeelsLike(data.main.feels_like);
-        setMainTemp(data.main.temp);
+        setFeelsLike(data.current.feels_like);
+        setMainTemp(data.current.temp);
         setDescription(data.weather[0].description);
       });
   }, []);
