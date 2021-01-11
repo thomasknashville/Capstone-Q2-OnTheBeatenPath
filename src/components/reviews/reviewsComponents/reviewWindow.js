@@ -4,22 +4,27 @@ const ReviewWindow = () => {
   const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
-    const getReviews = async () => {
-      try {
-        const response = await fetch("/api/me");
-        const data = await response.json;
-        setReviews(data.name);
-        console.log(JSON.parse(response.name));
-      } catch (err) {
-        console.error("Unable to collect data requested", err);
-      }
-    };
-    getReviews();
+    fetch("/api/me", {
+      method: "GET",
+    })
+      .then((res) => {
+        console.log(res);
+        return res.json();
+      })
+      .then(
+        (json) => {
+          console.log(json);
+          setReviews(json);
+        },
+        (err) => {
+          console.error(err);
+        }
+      );
   }, []);
-  //   console.log(reviews);
+  // console.log(reviews);
   return (
     <div id="reviewWindow">
-      <p>{reviews.name}</p>
+      <p>Here are some reviews: {reviews.name}</p>
     </div>
   );
 };

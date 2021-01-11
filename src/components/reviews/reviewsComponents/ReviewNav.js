@@ -2,10 +2,13 @@ import React from "react";
 
 const ReviewNav = () => {
   return (
-    <div id="reviewNav">
-      <p>Link to park pages</p>
-      <p>Recommend a park(Link to our email)</p>
-    </div>
+    <select>
+      <option>Carlsbad Cavern</option>
+      <option>Curecanti National Recreation Area</option>
+      <option>Everglades National Park</option>
+      <option>Indiana Dunes National Park</option>
+      <option>Lake Meredith National Recreation Area</option>
+    </select>
   );
 };
 

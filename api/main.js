@@ -3,7 +3,7 @@ import cors from "cors";
 
 const app = express();
 
-app.use(cors()); // DONT FORGET TO ADD ME!!!
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -15,6 +15,10 @@ app.get("/api", (req, res) => {
 
 app.get("/api/me", (req, res) => {
   res.json({
+    name: "Anthony",
+    cool: true,
+  });
+  res.send({
     name: "Anthony",
     cool: true,
   });
