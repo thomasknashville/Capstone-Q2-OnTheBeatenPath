@@ -2,7 +2,6 @@ import "./App.css";
 
 import Links from "./components/Links";
 import useAuth from "./hooks/useAuth";
-import logo from "./logo.svg";
 
 import Home from "./components/home/Home.js";
 import Navigation from "./components/navigation/Navigation";
