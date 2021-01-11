@@ -19,14 +19,14 @@
   width: 60vw;
 }
 
+select {
+  width: 60vw;
+}
+
 #reviewWindow {
   width: 60vw;
   height: 400px;
   border: solid 1px black;
-}
-
-select {
-  width: 60vw;
 }
 
 .footer {
