@@ -1,11 +1,12 @@
 // import { render } from "@testing-library/react";
 import React, { useState, useEffect } from "react";
 // import ReactDOM from "react";
-
-//TODO get id from park.total function
+let parkPics = [];
+let latLong = "";
+let parkDescription = "";
 
 const Parks = () => {
-  const [park, setPark] = useState([]);
+  const [data, setData] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
@@ -21,15 +22,16 @@ const Parks = () => {
 
       .then((res) => {
         console.log(res);
-        setPark(res.data.fullName);
+        setData(res.data.fullName);
         setIsLoaded(true);
+      })
+      .catch((err) => {
+        console.error(err);
       });
-    // .catch((err) => {
-    //   console.error(err);
-    // });
   }, []);
 
-  //  TODO get pics, latLong, bodyText in api/main.js
+  //  TODO get latLong, addresses, images (set images [0] to home page carousel, bodyText in api/main.js
+  // get a list of parks in alpha order? or just start with our 5?
 
   if (!isLoaded) {
     return <div>Loading...</div>;
@@ -40,9 +42,9 @@ const Parks = () => {
         This is parks page
         {/* form input button 'park name' onclick click handler funct does the query fetch */}
         <ul>
-          {park.map((park) => (
-            <li key={park.total}>
-              Name: {park.fullName} | Address :{park.addresses}
+          {data.map((park) => (
+            <li key={data.id}>
+              Name: {data.fullName} | Address :{data.addresses}
             </li>
           ))}
         </ul>
@@ -52,3 +54,13 @@ const Parks = () => {
 };
 
 export default Parks;
+
+// print(data["data"][0]["fullName"])
+// for address in data["data"][0]["addresses"]:
+//     if address["type"] == "Mailing":
+//         print(address["line1"])
+//         if address["line2"] != "":
+//             print(address["line2"])
+//         if address["line3"] != "":
+//             print(address["line3"])
+//         print(address["city"] + ", " + address["stateCode"] + " " + str(address["postalCode"]))

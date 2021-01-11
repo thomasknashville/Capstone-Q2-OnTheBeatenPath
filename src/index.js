@@ -4,11 +4,13 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
+import Parks from "./components/parks/Parks";
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <App />
+      <Parks />
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root"),
@@ -18,3 +20,5 @@ ReactDOM.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+// is App.js doing the same thing????
