@@ -1,16 +1,17 @@
 import React from "react";
-import { NavLink, Route, Switch } from "react-router-dom";
+import { NavLink, Switch } from "react-router-dom";
+import ConnectedRoute from "./ConnectedRoute";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import Home from "../home/Home";
-import Parks from "../parks/Parks";
-import Reviews from "../reviews/Reviews";
-import About from "../about/About";
-import Login from "../login/Login";
-import "./Navigation.css";
+import Home from "./home/Home";
+import Parks from "./parks/Parks";
+import Reviews from "./reviews/Reviews";
+import About from "./about/About";
 
-const Navigation = () => {
+// import "./Navigation.css";
+
+export default function Navigation() {
   return (
     <>
       <Navbar fixed="top" variant="dark" className="bg">
@@ -28,31 +29,15 @@ const Navigation = () => {
           <NavLink to="reviews" activeClassName="selected" exact={true} className="mr-3 nav-link">
             Reviews
           </NavLink>
-          <NavLink to="login" activeClassName="selected" exact={true} className="mr-3 nav-link">
-            Login-in/Sign-Up
-          </NavLink>
         </Nav>
       </Navbar>
-
       <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route path="/parks">
-          <Parks />
-        </Route>
-        <Route path="/about">
-          <About />
-        </Route>
-        <Route path="/reviews">
-          <Reviews />
-        </Route>
-        <Route path="/login">
-          <Login />
-        </Route>
+        <ConnectedRoute exact path="/" redirectIfAuthenticated component={Home} />
+        <ConnectedRoute exact isProtected path="/parks" component={Parks} />
+        <ConnectedRoute exact isProtected path="/about" component={About} />
+        <ConnectedRoute exact isProtected path="/reviews" component={Reviews} />
+        <ConnectedRoute path="*" component={404} />
       </Switch>
     </>
   );
-};
-
-export default Navigation;
+}

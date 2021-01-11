@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import "./Reviews.css";
 import Footer from "./reviewsComponents/Footer";
@@ -22,3 +23,20 @@ const Reviews = () => {
 };
 
 export default Reviews;
+=======
+// import React from 'react';
+
+// const Reviews = () => {
+//   return (
+//     <>
+//     <div> This is Reviews page </div>
+//     </>
+//   )
+// }
+
+// export default Reviews;
+
+export default function Reviews() {
+  return <h1>Reviews</h1>;
+}
+>>>>>>> authentication
