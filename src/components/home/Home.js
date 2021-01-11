@@ -4,7 +4,7 @@ import Navigation from "../navigation/Navigation";
 
 const Home = () => {
   return (
-    <Container id='homePage'>
+    <Container className='fx-margin'>
       <div> This is Home page</div>
     </Container>
   )

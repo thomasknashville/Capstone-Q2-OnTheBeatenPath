@@ -1,10 +1,11 @@
 import React from 'react';
+import Container from 'react-bootstrap/Container';
 
 const Reviews = () => {
   return (
-    <>
-    <div> This is Reviews page </div>
-    </>
+    <Container className='fx-margin'>
+      <div> This is Reviews page</div>
+    </Container>
   )
 }
 
