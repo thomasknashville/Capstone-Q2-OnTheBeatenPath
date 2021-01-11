@@ -4,7 +4,7 @@ import Links from "./components/Links";
 import useAuth from "./hooks/useAuth";
 
 import Home from "./components/home/Home.js";
-import Navigation from "./components/navigation/Navigation";
+import Navigation from "./components/Navigation";
 
 function App() {
   const auth = useAuth();

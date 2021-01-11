@@ -1,6 +1,7 @@
 import React from "react";
 import { Route, Redirect } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
+import About from "../components";
 
 export default function ConnectedRoute({
   isProtected,
@@ -20,7 +21,7 @@ export default function ConnectedRoute({
         render={({ location }) => (
           <Redirect
             to={{
-              pathname: `/dashboard`,
+              pathname: `/reviews`,
               state: { from: location },
             }}
           />
