@@ -1,12 +1,11 @@
 import React from "react";
-
-import Weather from "../weather/Weather";
+import Card from "../card/Card";
 
 const Parks = () => {
   return (
     <>
       This is the parks Page.
-      <Weather />
+      <Card />
     </>
   );
 };
