@@ -1,5 +1,6 @@
 import React from "react";
-import Weather from "./weather/Weather";
+
+import Weather from "../weather/Weather";
 
 const Parks = () => {
   return (
