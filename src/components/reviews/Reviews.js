@@ -1,7 +1,7 @@
 import React from "react";
 import "./Reviews.css";
 import Footer from "./reviewsComponents/Footer";
-import ReviewWindow from "./reviewsComponents/ReviewWindow";
+import ReviewWindow from "./reviewsComponents/reviewWindow";
 import ReviewNav from "./reviewsComponents/ReviewNav";
 
 const Reviews = () => {
@@ -16,9 +16,7 @@ const Reviews = () => {
         <ReviewWindow />
       </div>
       <br />
-      <div className="footer">
-        <Footer />
-      </div>
+      <Footer />
     </div>
   );
 };
