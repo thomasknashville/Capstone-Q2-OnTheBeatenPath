@@ -4,10 +4,10 @@ import Navigation from "../navigation/Navigation";
 
 const Home = () => {
   return (
-    <Container id='homePage'>
+    <Container id="homePage">
       <div> This is Home page</div>
     </Container>
-  )
-}
+  );
+};
 
 export default Home;
