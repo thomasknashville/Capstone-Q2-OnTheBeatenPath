@@ -1,8 +1,4 @@
 import Carousel from "react-bootstrap/Carousel";
-<<<<<<< HEAD
-
-=======
->>>>>>> 8dc9a0247ff949e1b2158102b1884f76ca105657
 // npm install react-boostrap boostrap
 
 <Carousel>

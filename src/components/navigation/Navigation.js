@@ -8,8 +8,6 @@ import Parks from "../parks/Parks";
 import Reviews from "../reviews/Reviews";
 import About from "../about/About";
 import Login from "../login/Login";
-import App from "../../App";
-import "../../App.css";
 import "./Navigation.css";
 
 const Navigation = () => {
