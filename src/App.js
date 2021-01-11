@@ -1,11 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
-import Home from './components/home/Home.js';
-import Navigation from './components/navigation/Navigation';
+// import Home from "./components/home/Home.js";
+import Parks from "./components/parks/Parks";
+import Navigation from "./components/navigation/Navigation";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
+      <Parks />
       <Navigation />
     </div>
   );
