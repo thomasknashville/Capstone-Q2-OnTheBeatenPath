@@ -15,7 +15,7 @@ const Navigation = () => {
       <Navbar bg='dark'fixed='top' variant='dark' className='bg'>
         <Navbar.Brand className='brand'> On the Beaten Path </Navbar.Brand>
         <Nav className="ml-auto">
-          <NavLink activeClassName="selected" exact={true} className="mr-3 nav-link"to='/'> Home </NavLink>
+          <NavLink activeClassName="selected" exact={true} className="nav-link"to='/'> Home </NavLink>
           <NavLink activeClassName="selected" className="nav-link"to='/parks'> Parks </NavLink>
           <NavLink activeClassName="selected" className="nav-link"to='reviews'> Reviews </NavLink>
           <NavDropdown title='About' id='basic-nav-dropdown'>
