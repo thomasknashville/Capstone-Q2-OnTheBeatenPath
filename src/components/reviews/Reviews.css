@@ -1,0 +1,35 @@
+.body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  width: 100vw;
+}
+
+.reviewBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 60vw;
+}
+
+select {
+  width: 60vw;
+}
+
+#reviewWindow {
+  width: 60vw;
+  height: 400px;
+  border: solid 1px black;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+}

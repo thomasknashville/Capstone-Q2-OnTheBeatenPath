@@ -1,12 +1,14 @@
-import React from 'react';
-import Container from 'react-bootstrap/Container';
+// import React from 'react';
 
-const About = () => {
-  return (
-    <Container className='fx-margin'>
-    <div> This is About page</div>
-  </Container>
-  )
+// const About = () => {
+//   return (
+//     <>
+//     <div> This is About page </div>
+//     </>
+//   )
+// }
+
+// export default About;
+export default function About() {
+  return <h1>About</h1>;
 }
-
-export default About;

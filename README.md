@@ -11,7 +11,7 @@ Users can create a profile, keep up with their groups, and post photos and comme
 Once your project has been completed please fill out the links below. These are a part of the rubric and must be
 completed before the submission deadline
 
-**[Scrum Board URL](https://trello.com/)** | **[Deployment URL](https://heroku.com/)** |
+**[Scrum Board URL](https://trello.com/)** | **[Deployment URL](https://onthebeatenpath.vercel.app/)** |
 **[Kapstone Pitch URL](https://google.com/)** | **[Group Retrospective Document URL](https://google.com/)** |
 **[Kapstone Feedback Form](https://docs.google.com/forms/d/e/1FAIpQLSeGbm0WcPzlEXHYkWDHcKmXr0fY3cF9sA1zGiP16sjd-0Jg5A/viewform)**
 
