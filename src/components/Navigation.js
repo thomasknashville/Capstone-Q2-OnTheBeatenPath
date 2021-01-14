@@ -13,18 +13,26 @@ import "./navigation/Navigation.css";
 export default function Navigation() {
   return (
     <>
-    <Navbar bg='dark'fixed='top' variant='dark' className='bg'>
-        <Navbar.Brand className='brand'> On the Beaten Path </Navbar.Brand>
+      <Navbar bg="dark" fixed="top" variant="dark" className="bg">
+        <Navbar.Brand className="brand"> On the Beaten Path </Navbar.Brand>
         <Nav className="ml-auto">
-          <NavLink activeClassName="selected" exact={true} className="nav-link"to='/'> Home </NavLink>
-          <NavLink activeClassName="selected" className="nav-link"to='/parks'> Parks </NavLink>
-          <NavLink activeClassName="selected" className="nav-link"to='reviews'> Reviews </NavLink>
-          <NavDropdown title='About' id='basic-nav-dropdown'>
+          <NavLink activeClassName="selected" exact={true} className="nav-link" to="/">
+            {" "}
+            Home{" "}
+          </NavLink>
+          <NavLink activeClassName="selected" className="nav-link" to="/parks">
+            {" "}
+            Parks{" "}
+          </NavLink>
+          <NavLink activeClassName="selected" className="nav-link" to="reviews">
+            {" "}
+            Reviews{" "}
+          </NavLink>
+          <NavDropdown title="About" id="basic-nav-dropdown">
             <NavDropdown.Item href="MeetUs">Meet the Team</NavDropdown.Item>
-            <NavDropdown.Item href="Future">Future of the App</NavDropdown.Item>                         
+            <NavDropdown.Item href="Future">Future of the App</NavDropdown.Item>
             <NavDropdown.Item href="Contact">Contact Us</NavDropdown.Item>
           </NavDropdown>
-          
         </Nav>
       </Navbar>
       <Switch>
