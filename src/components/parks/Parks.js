@@ -13,18 +13,19 @@ const Parks = () => {
 
   useEffect(() => {
     console.log("mounted");
-    fetch("developer.nps.gov/api/v1/parks", {
-      method: "GET",
-      headers: { api_key: "tNfghfa6ZwSpNcH4xiYBMBVdgkWYjtlFegupg12R" },
-    })
-      .then((res) => {
-        res.json();
-        console.log(res);
-      })
+    fetch(
+      "https://developer.nps.gov/api/v1/parks?api_key=d4lCLBfTkTqlqL0cT2q46SJawlqGZ1eLyShCEEDP",
+      // , {
+      //   method: "GET",
+      //   mode: "no-cors",
+      //   headers: { api_key: "d4lCLBfTkTqlqL0cT2q46SJawlqGZ1eLyShCEEDP" },
+      // }
+    )
+      .then((res) => res.json())
 
-      .then((res) => {
-        console.log(res);
-        setData(res.data.fullName);
+      .then((data) => {
+        console.log(data);
+        setData(data.data);
         setIsLoaded(true);
       })
       .catch((err) => {
@@ -46,9 +47,7 @@ const Parks = () => {
         {/* form input button 'park name' onclick click handler funct does the query fetch */}
         <ul>
           {data.map((park) => (
-            <li key={data.id}>
-              Name: {data.fullName} | Address :{data.addresses}
-            </li>
+            <li key={park.id}>Name: {park.fullName} </li>
           ))}
         </ul>
       </div>
@@ -57,13 +56,3 @@ const Parks = () => {
 };
 
 export default Parks;
-
-// print(data["data"][0]["fullName"])
-// for address in data["data"][0]["addresses"]:
-//     if address["type"] == "Mailing":
-//         print(address["line1"])
-//         if address["line2"] != "":
-//             print(address["line2"])
-//         if address["line3"] != "":
-//             print(address["line3"])
-//         print(address["city"] + ", " + address["stateCode"] + " " + str(address["postalCode"]))
