@@ -4,18 +4,20 @@ import {} from "module";
 import OutlinedCard from "../card/OutlinedCard";
 import Navigation from "../Navigation";
 // import ReactDOM from "react";
-let parkPics = [];
-let latLong = "";
-let parkDescription = "";
+// TODO:
+// let parkPics = [];
+// let latLong = "";
+// let parkDescription = "";
 
 const Parks = () => {
   const [data, setData] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
-  const [start, setStart] = useState(0);
+  // const [start, setStart] = useState(0);
   useEffect(() => {
     console.log("mounted");
     fetch(
-      `https://developer.nps.gov/api/v1/parks?api_key=d4lCLBfTkTqlqL0cT2q46SJawlqGZ1eLyShCEEDP&start=${start}`,
+      // `&start=${start}`
+      "https://developer.nps.gov/api/v1/parks?api_key=d4lCLBfTkTqlqL0cT2q46SJawlqGZ1eLyShCEEDP",
       // , {
       //   method: "GET",
       //   mode: "no-cors",
@@ -48,14 +50,15 @@ const Parks = () => {
           <OutlinedCard />
           {/* form input button 'park name' onclick click handler funct does the query fetch */}
           {/* start += 50 onClick use setStart*/}
+          Select a park to view!
           <select>
             {data
               .filter((park) => park.fullName.includes("National Park"))
               .map((park) => (
-                <option key={park.id}> Name: {park.fullName} </option>
+                <option key={park.id}> Park Name: {park.fullName} </option>
               ))}
           </select>
-          <carousel>{/* <carousel.item> {park.images[0]}</carousel.item> */}</carousel>
+          {/* <carousel><carousel.item> {park.images[0]}</carousel.item></carousel> */}
         </div>
       </>
     );

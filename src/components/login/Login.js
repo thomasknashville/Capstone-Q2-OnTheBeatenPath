@@ -1,10 +1,11 @@
 import React from 'react';
+import Container from 'react-bootstrap/Container'
 
 const Login = () => {
   return (
-    <>
-    <div> This is login page </div>
-    </>
+    <Container className='fx-margin'>
+      <div> This is Login page</div>
+    </Container>
   )
 }
 
