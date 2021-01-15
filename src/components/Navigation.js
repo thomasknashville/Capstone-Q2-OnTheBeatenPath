@@ -34,7 +34,7 @@ export default function Navigation() {
           <NavLink activeClassName="selected" className="mr-3 nav-link"to='reviews'> Reviews </NavLink>
           <NavDropdown title='About' id='basic-nav-dropdown'>
             <NavDropdown.Item href="MeetUs">Meet the Team</NavDropdown.Item>
-            <NavDropdown.Item href="Future">Future of the App</NavDropdown.Item>                         
+            <NavDropdown.Item href="Future">Future of the App</NavDropdown.Item>
             <NavDropdown.Item href="Contact">Contact Us</NavDropdown.Item>
           </NavDropdown>
           </Nav>

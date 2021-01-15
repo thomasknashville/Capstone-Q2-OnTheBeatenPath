@@ -3,9 +3,9 @@ import Parks from "./components/parks/Parks";
 import "./App.css";
 import React from "react";
 import { connect } from "react-redux";
-import Links from "./components/Links";
+// import Links from "./components/Links";
 import useAuth from "./hooks/useAuth";
-import Home from "./components/home/Home.js";
+// import Home from "./components/home/Home.js";
 import Navigation from "./components/Navigation";
 //import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -14,7 +14,6 @@ function App() {
   return (
     <div className="App">
       <Parks />
-
       <Navigation />
     </div>
   );
