@@ -17,12 +17,15 @@ export default function About() {
       What you see is just the beginning of an interactive and engaging place to learn about, discover, and support US
       parks. So far, we have taken a few parks and given their short descriptions, a few pictures, and local weather
       forecasts, as well as provided a place to write your own reviews and upload your own pictures of your park visits.
+      Ultimately, this app will be populated with a lot more accessibilty information and virtual tours for the parks,
+      which can be tied in with educational uses. We may also implement a 'gameified' version where you can learn and
+      discover and play games as you complete a map of the parks virtually.
     </div>
     <div classname="Meet the Team">
       Our team of student developers is made up of Karen Thomas (thomasknashville@gmail.com) Anthony Nickson (email),
       Bobble Ellena (email), Eric Hall (email), Ron O'Rourke (email). We are a group of Kenzie Academy Students in the
       Software Engineering program SE-12 July 2020!
     </div>
-    <div classname="Contact Us">Send us an email with questions and suggestions to: KapstoneKenzie@gmail.com</div>
+    <div classname="Contact Us">Send us an email with questions and suggestions to: KapstoneKenzie@Gmail.com</div>
   </>;
 }
