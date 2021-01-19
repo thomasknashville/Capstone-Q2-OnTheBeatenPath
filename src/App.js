@@ -13,7 +13,6 @@ function App() {
 
   return (
     <div className="App">
-      <Parks />
       <Navigation />
     </div>
   );

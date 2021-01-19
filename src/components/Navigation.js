@@ -26,9 +26,9 @@ export default function Navigation() {
         <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="mr-auto">
           
-          <NavLink activeClassName="selected" exact={true} className="mr-3 nav-link"to='/'> Home </NavLink>
-          <NavLink activeClassName="selected" className="mr-3 nav-link"to='/parks'> Parks </NavLink>
-          <NavLink activeClassName="selected" className="mr-3 nav-link"to='reviews'> Reviews </NavLink>
+          <NavLink activeClassName="selected" exact={true} className="mr-3 nav-link"to='/'> {""}Home{""} </NavLink>
+          <NavLink activeClassName="selected" className="mr-3 nav-link"to='/parks'> {""}Parks{""} </NavLink>
+          <NavLink activeClassName="selected" className="mr-3 nav-link"to='reviews'> {""}Reviews{""} </NavLink>
           <NavDropdown title='About' id='basic-nav-dropdown'>
             <NavDropdown.Item href="MeetUs">Meet the Team</NavDropdown.Item>
             <NavDropdown.Item href="Future">Future of the App</NavDropdown.Item>
@@ -46,11 +46,9 @@ export default function Navigation() {
           )}
         </Navbar.Collapse>
       </Navbar>
-
+        {auth.loggedIn ? (
       <Switch>
         <ConnectedRoute exact path="/" RedirectIfAuthenticated component={Home} />
-        {auth.loggedIn ? (
-          <>
         <ConnectedRoute exact path="/parks" component={Parks} />
         <ConnectedRoute exact isProtected path="/about" component={About} />
         <ConnectedRoute exact isProtected path="/reviews" component={Reviews} />
@@ -58,11 +56,11 @@ export default function Navigation() {
         <ConnectedRoute exact isProtected path="/Future" component={About} />
         <ConnectedRoute exact isProtected path="/Contact" component={About} />
         <ConnectedRoute path="*" component={404} />
-        </>
+
+      </Switch> 
         ) : (
           <div className="fx-margin Login"> Please Login</div>
         )}
-      </Switch>
     </>
   );
 }
