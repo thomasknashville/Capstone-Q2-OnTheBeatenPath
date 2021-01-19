@@ -10,10 +10,7 @@ import "./navigation/Navigation.css";
 import useAuth from "../hooks/useAuth";
 //import "./Navigation.css";
 
-
-
 export default function Navigation() {
-
   const auth = useAuth();
 
   function loginNow() {
@@ -39,11 +36,14 @@ export default function Navigation() {
           </NavDropdown>
           </Nav>
           {auth.loggedIn ? (
-          <Button className='ml-auto' variant='dark' onClick={() => auth.logout()}>Logout</Button>
-      ) : (
-          <Button className='ml-auto' variant='dark' onClick={loginNow}>Login Now</Button>
-      )}
-        
+            <Button className="ml-auto" variant="dark" onClick={() => auth.logout()}>
+              Logout
+            </Button>
+          ) : (
+            <Button className="ml-auto" variant="dark" onClick={loginNow}>
+              Login Now
+            </Button>
+          )}
         </Navbar.Collapse>
       </Navbar>
 
@@ -60,7 +60,7 @@ export default function Navigation() {
         <ConnectedRoute path="*" component={404} />
         </>
         ) : (
-          <div className='fx-margin Login'> Please Login</div>
+          <div className="fx-margin Login"> Please Login</div>
         )}
       </Switch>
     </>
