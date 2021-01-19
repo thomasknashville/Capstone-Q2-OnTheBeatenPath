@@ -6,14 +6,15 @@ import Navigation from "../Navigation";
 // import BootstrapCarousel from "../pictures/pics";
 // import ReactDOM from "react";
 import "../../App.css";
-// import Cards from "../card/Cards.js";
+import Cards from "../card/Cards.js";
 
 function Parks() {
   const [data, setData] = useState([]);
   const [isLoaded, setIsLoaded] = useState(true);
-  const [images, setImages] = useState([]);
-  const [latLong, setLatLong] = useState("");
-  const [parkDesc, setParkDesc] = useState("");
+  // const [images, setImages] = useState([]);
+  // const [latLong, setLatLong] = useState("");
+  // const [parkDesc, setParkDesc] = useState("");
+  // const [selectPark, SetSelectPark] = useState("");
   // const [start, setStart] = useState(0);
 
   useEffect(() => {
@@ -23,9 +24,10 @@ function Parks() {
         console.log(data);
         setData(data.data);
         setIsLoaded(true);
-        setImages(data.images);
-        setLatLong(data.latLong);
-        setParkDesc(data.description);
+        // setImages(data.data.images);
+        // setLatLong(data.data.latLong);
+        // setParkDesc(data.data.description);
+        console.log(data.data.id);
       });
   }, []);
 
@@ -35,37 +37,40 @@ function Parks() {
     return (
       <>
         <Navigation />
-<<<<<<< HEAD
         <OutlinedCard />
+
         <div className="Parks">
           This is parks page
-=======
-        {/* run<Cards /> */}
-        <div className="Parks">
-          This is the parks page
-          <OutlinedCard />
-          {/* <BootstrapCarousel /> */}
->>>>>>> a1507b30b5fb82959a4422c8545be654ca218dc2
           {/* form input button 'park name' onclick click handler funct does the query fetch */}
           {/* start += 50 onClick use setStart*/}
           Select a park to view!
           <select>
             {data
               .filter((park) => park.fullName.includes("National Park"))
-              .map((park) => (
-                <option key={park.id}> Park Name: {park.fullName} </option>
-              ))}
+              .map((park) => {
+                return <option key={park.id}> Park Name: {park.fullName} </option>;
+              })}
           </select>
-          {/* set the following for selected park???? */}
-          {/* function parkImages() {
-          let parkImages = data.map((park) => (data.park.images)
-        } */}
-          {images}
-          {parkDesc}
-          {latLong}
+          {/* {data
+            .filter((park) => park.fullName.includes("National Park"))
+            .map((park) => {
+              return 
+                <div>
+                  <p>
+                    {park.images}
+                    {park.description}
+                    {park.latLong}
+                  </p>
+                </div>
+              );
+            })} */}
         </div>
       </>
     );
   }
 }
 export default Parks;
+
+{
+  /* <Cards name={park.fullName} location={park.latLong} description={park.description} /> */
+}
