@@ -45,9 +45,9 @@ const Parks = () => {
     return (
       <>
         <Navigation />
+        <OutlinedCard />
         <div className="Parks">
           This is parks page
-          <OutlinedCard />
           {/* form input button 'park name' onclick click handler funct does the query fetch */}
           {/* start += 50 onClick use setStart*/}
           Select a park to view!
