@@ -21,7 +21,7 @@ export default function ConnectedRoute({
         render={({ location }) => (
           <Redirect
             to={{
-              pathname: `/reviews`,
+              pathname: `/`,
               state: { from: location },
             }}
           />

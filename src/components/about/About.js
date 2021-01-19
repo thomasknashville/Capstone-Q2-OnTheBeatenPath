@@ -11,6 +11,7 @@
 
 // export default About;
 export default function About() {
+<<<<<<< HEAD
   return <h1 className="fx-margin">About</h1>;
   <>
     <div classname="The Future of this App">
@@ -25,4 +26,7 @@ export default function About() {
     </div>
     <div classname="Contact Us">Send us an email with questions and suggestions to: KapstoneKenzie@gmail.com</div>
   </>;
+=======
+  return <h1 className='fx-margin'>About</h1>;
+>>>>>>> master
 }

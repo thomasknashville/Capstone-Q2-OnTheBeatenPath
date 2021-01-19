@@ -11,9 +11,14 @@ profile, keep up with their peers, and post photos and commentary on their favor
 Once your project has been completed please fill out the links below. These are a part of the rubric and must be
 completed before the submission deadline
 
+<<<<<<< HEAD
 **[Scrum Board URL](https://trello.com/)** | **[Deployment URL](https://onthebeatenpath.vercel.app/)** |
 **[Kapstone Pitch URL](https://docs.google.com/document/d/1QZwwPDaHK0Y8LXQ6RvwL7ziLWrV4fl-McGDpW4m-Pdc/edit?usp=sharing)**
 | **[Group Retrospective Document URL](https://google.com/)** |
+=======
+**[Scrum Board URL](https://trello.com/b/InXfoAoj/simple-project-board)** | **[Deployment URL](https://onthebeatenpath.vercel.app/)** |
+**[Kapstone Pitch URL](https://google.com/)** | **[Group Retrospective Document URL](https://google.com/)** |
+>>>>>>> master
 **[Kapstone Feedback Form](https://docs.google.com/forms/d/e/1FAIpQLSeGbm0WcPzlEXHYkWDHcKmXr0fY3cF9sA1zGiP16sjd-0Jg5A/viewform)**
 
 > **Note:** **Points will be deducted** if this is not filled in correctly. Also each one of these **MUST** live in
@@ -33,7 +38,8 @@ better). Also please choose ONE of the staff below that was your investor and re
 | Karen Thomas        | `Scrum Master`     | Fill me out...                    |
 | Anthony Nickson     | `Dev`              | Fill me out...                    |
 | Bobby Ellena        | `Dev`              | Fill me out...                    |
-| Ronald O'Rourke     | `Dev`              | Fill me out...                    |
+| Ronald O'Rourke     | `Dev`              | Review component and associated   | Setting up Mongo and Mongoose
+|                     |                    | api requests                      |
 | Eric Hall           | `Dev`              | Fill me out...                    |
 | Git Merge           | `Dev`              | Fill me out...                    |
 | Rimraf Node_modules | `Dev`              | Fill me out...                    |
