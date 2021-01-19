@@ -1,4 +1,3 @@
-
 import React from "react";
 import "./Reviews.css";
 import Footer from "./reviewsComponents/Footer";
@@ -23,4 +22,3 @@ const Reviews = () => {
 };
 
 export default Reviews;
-

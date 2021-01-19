@@ -3,9 +3,9 @@ import Parks from "./components/parks/Parks";
 import "./App.css";
 import React from "react";
 import { connect } from "react-redux";
-import Links from "./components/Links";
+// import Links from "./components/Links";
 import useAuth from "./hooks/useAuth";
-import Home from "./components/home/Home.js";
+// import Home from "./components/home/Home.js";
 import Navigation from "./components/Navigation";
 //import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -14,7 +14,21 @@ function App() {
   return (
     <div className="App">
       <Parks />
-
+      {auth.loggedIn ? (
+        <div>
+          You are logged-in.
+          <br />
+          <button className="fx-margin" onClick={() => auth.logout()}>
+            Logout
+          </button>
+        </div>
+      ) : (
+        <div>
+          <button className="fx-margin" onClick={loginNow}>
+            Login Now
+          </button>
+        </div>
+      )}
       <Navigation />
     </div>
   );

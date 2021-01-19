@@ -17,30 +17,13 @@
 .env.development.local
 .env.test.local
 .env.production.local
-
+package.json
+package-lock.json 
 
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-.vercel
-.eslintcache
-=======
 .vercel
 .eslintcache
 
 
->>>>>>> weather
-=======
-
-.eslintcache
-.vercel
->>>>>>> reviews
-=======
-
-.vercel
-.eslintcache
->>>>>>> authentication

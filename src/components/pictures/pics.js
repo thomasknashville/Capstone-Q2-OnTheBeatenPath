@@ -1,11 +1,11 @@
 import Carousel from "react-bootstrap/Carousel";
-// npm install react-boostrap boostrap
-
+// npm install react-bootstrap bootstrap
+// component props will be the images import to parks
 <Carousel>
   <Carousel.Item interval={1000}>
     <img className="d-block w-100" src="holder.js/800x400?text=First slide&bg=373940" alt="First slide" />
     <Carousel.Caption>
-      <h3>First slide label</h3>
+      {/* <h3>{park.fullName}</h3> */}
       <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
     </Carousel.Caption>
   </Carousel.Item>
