@@ -10,15 +10,7 @@ import Navigation from "./components/Navigation";
 //import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
-  const auth = useAuth();
 
-  function loginNow() {
-    const email = prompt("Please enter your email");
-    auth.login(email);
-  }
-  if (auth.loading || auth.loggingIn || auth.loggingOut) {
-    return "Loading....";
-  }
   return (
     <div className="App">
       <Parks />
