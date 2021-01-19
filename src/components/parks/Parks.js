@@ -35,9 +35,17 @@ function Parks() {
     return (
       <>
         <Navigation />
+<<<<<<< HEAD
         <OutlinedCard />
         <div className="Parks">
           This is parks page
+=======
+        {/* run<Cards /> */}
+        <div className="Parks">
+          This is the parks page
+          <OutlinedCard />
+          {/* <BootstrapCarousel /> */}
+>>>>>>> a1507b30b5fb82959a4422c8545be654ca218dc2
           {/* form input button 'park name' onclick click handler funct does the query fetch */}
           {/* start += 50 onClick use setStart*/}
           Select a park to view!
