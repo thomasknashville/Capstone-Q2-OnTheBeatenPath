@@ -7,7 +7,7 @@ import useAuth from "./hooks/useAuth";
 // import Home from "./components/home/Home.js";
 import Navigation from "./components/Navigation";
 //import 'bootstrap/dist/css/bootstrap.min.css';
-import Carousel from "./components/pictures/pics";
+// import BootstrapCarousel from "./components/pictures/pics";
 
 function App() {
   const auth = useAuth();

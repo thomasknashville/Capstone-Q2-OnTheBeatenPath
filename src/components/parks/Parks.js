@@ -3,42 +3,29 @@ import React, { useState, useEffect } from "react";
 import {} from "module";
 import OutlinedCard from "../card/OutlinedCard";
 import Navigation from "../Navigation";
-import BootstrapCarousel from "../pictures/pics";
+// import BootstrapCarousel from "../pictures/pics";
 // import ReactDOM from "react";
-// TODO:
-// let parkPics = [];
-// let latLong = "";
-// let parkDescription = "";
 
-const Parks = () => {
+function Parks() {
   const [data, setData] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [images, setImages] = useState([]);
+  const [latLong, setLatLong] = useState("");
+  const [parkDesc, setParkDesc] = useState("");
   // const [start, setStart] = useState(0);
-  useEffect(() => {
-    console.log("mounted");
-    fetch(
-      // `&start=${start}`
-      "https://developer.nps.gov/api/v1/parks?api_key=d4lCLBfTkTqlqL0cT2q46SJawlqGZ1eLyShCEEDP",
-      // , {
-      //   method: "GET",
-      //   mode: "no-cors",
-      //   headers: { api_key: "d4lCLBfTkTqlqL0cT2q46SJawlqGZ1eLyShCEEDP" },
-      // }
-    )
-      .then((res) => res.json())
 
+  useEffect(() => {
+    fetch("https://developer.nps.gov/api/v1/parks?api_key=d4lCLBfTkTqlqL0cT2q46SJawlqGZ1eLyShCEEDP")
+      .then((res) => res.json())
       .then((data) => {
         console.log(data);
         setData(data.data);
         setIsLoaded(true);
-      })
-      .catch((err) => {
-        console.error(err);
+        setImages(data.images);
+        setLatLong(data.latLong);
+        setParkDesc(data.description);
       });
   }, []);
-
-  //  TODO get latLong, addresses, images (set images [0] to home page carousel, bodyText in api/main.js
-  // get a list of parks in alpha order? or just start with our 5?
 
   if (!isLoaded) {
     return <div>Loading...</div>;
@@ -47,9 +34,9 @@ const Parks = () => {
       <>
         <Navigation />
         <div className="Parks">
-          This is parks page
+          This is the parks page
           <OutlinedCard />
-          <BootstrapCarousel />
+          {/* <BootstrapCarousel /> */}
           {/* form input button 'park name' onclick click handler funct does the query fetch */}
           {/* start += 50 onClick use setStart*/}
           Select a park to view!
@@ -60,11 +47,16 @@ const Parks = () => {
                 <option key={park.id}> Park Name: {park.fullName} </option>
               ))}
           </select>
-          {/* <carousel><carousel.item> {park.images[0]}</carousel.item></carousel> */}
+          {/* set the following for selected park???? */}
+          {/* function parkImages() {
+          let parkImages = data.map((park) => (data.park.images)
+        } */}
+          {images}
+          {parkDesc}
+          {latLong}
         </div>
       </>
     );
   }
-};
-
+}
 export default Parks;
