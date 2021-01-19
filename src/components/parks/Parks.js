@@ -5,10 +5,12 @@ import OutlinedCard from "../card/OutlinedCard";
 import Navigation from "../Navigation";
 // import BootstrapCarousel from "../pictures/pics";
 // import ReactDOM from "react";
+import "../../App.css";
+// import Cards from "../card/Cards.js";
 
 function Parks() {
   const [data, setData] = useState([]);
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(true);
   const [images, setImages] = useState([]);
   const [latLong, setLatLong] = useState("");
   const [parkDesc, setParkDesc] = useState("");
@@ -33,6 +35,7 @@ function Parks() {
     return (
       <>
         <Navigation />
+        {/* run<Cards /> */}
         <div className="Parks">
           This is the parks page
           <OutlinedCard />
