@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import {} from "module";
 import OutlinedCard from "../card/OutlinedCard";
 import Navigation from "../Navigation";
+import BootstrapCarousel from "../pictures/pics";
 // import ReactDOM from "react";
 // TODO:
 // let parkPics = [];
@@ -48,6 +49,7 @@ const Parks = () => {
         <div className="Parks">
           This is parks page
           <OutlinedCard />
+          <BootstrapCarousel />
           {/* form input button 'park name' onclick click handler funct does the query fetch */}
           {/* start += 50 onClick use setStart*/}
           Select a park to view!
