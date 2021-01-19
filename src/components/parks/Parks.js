@@ -3,41 +3,33 @@ import React, { useState, useEffect } from "react";
 import {} from "module";
 import OutlinedCard from "../card/OutlinedCard";
 import Navigation from "../Navigation";
+// import BootstrapCarousel from "../pictures/pics";
 // import ReactDOM from "react";
-// TODO:
-// let parkPics = [];
-// let latLong = "";
-// let parkDescription = "";
+import "../../App.css";
+import Cards from "../card/Cards.js";
 
-const Parks = () => {
+function Parks() {
   const [data, setData] = useState([]);
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(true);
+  // const [images, setImages] = useState([]);
+  // const [latLong, setLatLong] = useState("");
+  // const [parkDesc, setParkDesc] = useState("");
+  // const [selectPark, SetSelectPark] = useState("");
   // const [start, setStart] = useState(0);
-  useEffect(() => {
-    console.log("mounted");
-    fetch(
-      // `&start=${start}`
-      "https://developer.nps.gov/api/v1/parks?api_key=d4lCLBfTkTqlqL0cT2q46SJawlqGZ1eLyShCEEDP",
-      // , {
-      //   method: "GET",
-      //   mode: "no-cors",
-      //   headers: { api_key: "d4lCLBfTkTqlqL0cT2q46SJawlqGZ1eLyShCEEDP" },
-      // }
-    )
-      .then((res) => res.json())
 
+  useEffect(() => {
+    fetch("https://developer.nps.gov/api/v1/parks?api_key=uqNva6PQL13BVbKmZx3MApfJKFlammyCCyOEVdVz")
+      .then((res) => res.json())
       .then((data) => {
         console.log(data);
         setData(data.data);
         setIsLoaded(true);
-      })
-      .catch((err) => {
-        console.error(err);
+        // setImages(data.data.images);
+        // setLatLong(data.data.latLong);
+        // setParkDesc(data.data.description);
+        console.log(data.data.id);
       });
   }, []);
-
-  //  TODO get latLong, addresses, images (set images [0] to home page carousel, bodyText in api/main.js
-  // get a list of parks in alpha order? or just start with our 5?
 
   if (!isLoaded) {
     return <div>Loading...</div>;
@@ -45,6 +37,8 @@ const Parks = () => {
     return (
       <>
         <Navigation />
+        <OutlinedCard />
+
         <div className="Parks">
           <OutlinedCard />
           {/* form input button 'park name' onclick click handler funct does the query fetch */}
@@ -53,15 +47,30 @@ const Parks = () => {
           <select>
             {data
               .filter((park) => park.fullName.includes("National Park"))
-              .map((park) => (
-                <option key={park.id}> Park Name: {park.fullName} </option>
-              ))}
+              .map((park) => {
+                return <option key={park.id}> Park Name: {park.fullName} </option>;
+              })}
           </select>
-          {/* <carousel><carousel.item> {park.images[0]}</carousel.item></carousel> */}
+          {/* {data
+            .filter((park) => park.fullName.includes("National Park"))
+            .map((park) => {
+              return 
+                <div>
+                  <p>
+                    {park.images}
+                    {park.description}
+                    {park.latLong}
+                  </p>
+                </div>
+              );
+            })} */}
         </div>
       </>
     );
   }
-};
-
+}
 export default Parks;
+
+{
+  /* <Cards name={park.fullName} location={park.latLong} description={park.description} /> */
+}

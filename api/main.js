@@ -65,6 +65,19 @@ app.get("/api/parks", async (req, res) => {
   }
 });
 
+app.get("/api/parks/images", async (req, res) => {
+  res.status(200).send("Park Images Fetched");
+  try {
+    const parkImages = await req.db.collection("images");
+    res.json({
+      parkImages,
+    });
+  } catch (err) {
+    console.error(err);
+    res.status(500).send("Error Fetching Park Images");
+  }
+});
+
 app.post("/api/parks", async (req, res) => {
   try {
     const collection = await req.db.collection("parks");

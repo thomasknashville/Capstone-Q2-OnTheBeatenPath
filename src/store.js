@@ -1,9 +1,9 @@
 import { createStore, combineReducers } from "redux";
-import aboutReducer from "./components/about/Redux/aboutReducer";
-import homeReducer from "./components/home/Redux/homeReducer";
-import loginReducer from "./components/login/Redux/loginReducer";
-import parksReducer from "./components/parks/Redux/parksReducer";
-import reviewReducer from "./components/reviews/Redux/reviewReducer";
+import aboutReducer from "./components/ReduxReducers";
+import homeReducer from "./components/ReduxReducers";
+import loginReducer from "./components/ReduxReducers";
+import parksReducer from "./components/ReduxReducers";
+import reviewReducer from "./components/ReduxReducers";
 
 const allReducers = combineReducers({
   aboutReducer,
