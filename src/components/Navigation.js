@@ -51,7 +51,7 @@ export default function Navigation() {
         <ConnectedRoute exact path="/" RedirectIfAuthenticated component={Home} />
         {auth.loggedIn ? (
           <>
-        <ConnectedRoute exact isProtected path="/parks" component={Parks} />
+        <ConnectedRoute exact path="/parks" component={Parks} />
         <ConnectedRoute exact isProtected path="/about" component={About} />
         <ConnectedRoute exact isProtected path="/reviews" component={Reviews} />
         <ConnectedRoute exact isProtected path="/MeetUs" component={About} />
