@@ -17,7 +17,7 @@ function Parks() {
   // const [start, setStart] = useState(0);
 
   useEffect(() => {
-    fetch("https://developer.nps.gov/api/v1/parks?api_key=d4lCLBfTkTqlqL0cT2q46SJawlqGZ1eLyShCEEDP")
+    fetch("https://developer.nps.gov/api/v1/parks?api_key=uqNva6PQL13BVbKmZx3MApfJKFlammyCCyOEVdVz")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
