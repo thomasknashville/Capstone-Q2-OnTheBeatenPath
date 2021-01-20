@@ -78,18 +78,4 @@ app.get("/api/parks/images", async (req, res) => {
   }
 });
 
-app.post("/api/parks", async (req, res) => {
-  try {
-    const collection = await req.db.collection("parks");
-    const parks = await collection.find({}).toArray();
-    res.json({
-      parks,
-    });
-  } catch (err) {
-    console.error(err);
-    res.status(500).send("Internal Server Error :(");
-    // req.db.find{}
-  }
-});
-
 export default app;
