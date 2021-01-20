@@ -6,11 +6,12 @@ import Navigation from "../Navigation";
 // import BootstrapCarousel from "../pictures/pics";
 // import ReactDOM from "react";
 import "../../App.css";
-import Cards from "../card/Cards.js";
+import { Card, ListGroup, ListGroupItem } from "react-bootstrap";
 
 function Parks() {
   const [data, setData] = useState([]);
   const [isLoaded, setIsLoaded] = useState(true);
+  // const [nationalPark, setNationalPark] = useState([]);
   // const [images, setImages] = useState([]);
   // const [latLong, setLatLong] = useState("");
   // const [parkDesc, setParkDesc] = useState("");
@@ -30,6 +31,14 @@ function Parks() {
         console.log(data.data.id);
       });
   }, []);
+
+  // const grabNationalPark = () => {
+  //   setNationalPark(Object.keys);
+  // };
+
+  // useEffect(() => {
+  //   grabNationalPark();
+  // }, []);
 
   if (!isLoaded) {
     return <div>Loading...</div>;
@@ -51,26 +60,31 @@ function Parks() {
                 return <option key={park.id}> Park Name: {park.fullName} </option>;
               })}
           </select>
-          {/* {data
+          {data
             .filter((park) => park.fullName.includes("National Park"))
             .map((park) => {
-              return 
+              return (
                 <div>
-                  <p>
-                    {park.images}
-                    {park.description}
-                    {park.latLong}
-                  </p>
+                  <Card style={{ width: "18rem" }}>
+                    <Card.Img variant="top" src={park.images[0].url} />
+                    <Card.Body>
+                      <Card.Title>{park.fullName}ah!</Card.Title>
+                      <Card.Text>{park.description}</Card.Text>
+                    </Card.Body>
+                    <ListGroup className="list-group-flush">
+                      <ListGroupItem>{park.latLong}</ListGroupItem>
+                    </ListGroup>
+                    <Card.Body>
+                      <Card.Link href="#">Card Link</Card.Link>
+                      <Card.Link href="#">Another Link</Card.Link>
+                    </Card.Body>
+                  </Card>
                 </div>
               );
-            })} */}
+            })}
         </div>
       </>
     );
   }
 }
 export default Parks;
-
-{
-  /* <Cards name={park.fullName} location={park.latLong} description={park.description} /> */
-}
