@@ -20,28 +20,20 @@ export default function Navigation() {
 
   return (
     <>
-      <Navbar expand="lg" bg="dark" fixed="top" variant="dark" className="bg">
-        <Navbar.Brand className="brand mr-3"> On the Beaten Path </Navbar.Brand>
+    <Navbar expand='lg' bg='dark'fixed='top' variant='dark' className='bg'>
+        <Navbar.Brand className='brand mr-3'> On the Beaten Path </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="mr-auto">
-            <NavLink activeClassName="selected" exact={true} className="mr-3 nav-link" to="/">
-              {" "}
-              Home{" "}
-            </NavLink>
-            <NavLink activeClassName="selected" className="mr-3 nav-link" to="/parks">
-              {" "}
-              Parks{" "}
-            </NavLink>
-            <NavLink activeClassName="selected" className="mr-3 nav-link" to="reviews">
-              {" "}
-              Reviews{" "}
-            </NavLink>
-            <NavDropdown title="About" id="basic-nav-dropdown">
-              <NavDropdown.Item href="MeetUs">Meet the Team</NavDropdown.Item>
-              <NavDropdown.Item href="Future">Future of the App</NavDropdown.Item>
-              <NavDropdown.Item href="Contact">Contact Us</NavDropdown.Item>
-            </NavDropdown>
+        <Nav className="mr-auto">
+          
+          <NavLink activeClassName="selected" exact={true} className="mr-3 nav-link"to='/'> {""}Home{""} </NavLink>
+          <NavLink activeClassName="selected" className="mr-3 nav-link"to='/parks'> {""}Parks{""} </NavLink>
+          <NavLink activeClassName="selected" className="mr-3 nav-link"to='reviews'> {""}Reviews{""} </NavLink>
+          <NavDropdown title='About' id='basic-nav-dropdown'>
+            <NavDropdown.Item href="MeetUs">Meet the Team</NavDropdown.Item>
+            <NavDropdown.Item href="Future">Future of the App</NavDropdown.Item>
+            <NavDropdown.Item href="Contact">Contact Us</NavDropdown.Item>
+          </NavDropdown>
           </Nav>
           {auth.loggedIn ? (
             <Button className="ml-auto" variant="dark" onClick={() => auth.logout()}>
@@ -54,23 +46,21 @@ export default function Navigation() {
           )}
         </Navbar.Collapse>
       </Navbar>
-
+        {auth.loggedIn ? (
       <Switch>
         <ConnectedRoute exact path="/" RedirectIfAuthenticated component={Home} />
-        {auth.loggedIn ? (
-          <>
-            <ConnectedRoute exact isProtected path="/parks" component={Parks} />
-            <ConnectedRoute exact isProtected path="/about" component={About} />
-            <ConnectedRoute exact isProtected path="/reviews" component={Reviews} />
-            <ConnectedRoute exact isProtected path="/MeetUs" component={About} />
-            <ConnectedRoute exact isProtected path="/Future" component={About} />
-            <ConnectedRoute exact isProtected path="/Contact" component={About} />
-            <ConnectedRoute path="*" component={404} />
-          </>
+        <ConnectedRoute exact path="/parks" component={Parks} />
+        <ConnectedRoute exact isProtected path="/about" component={About} />
+        <ConnectedRoute exact isProtected path="/reviews" component={Reviews} />
+        <ConnectedRoute exact isProtected path="/MeetUs" component={About} />
+        <ConnectedRoute exact isProtected path="/Future" component={About} />
+        <ConnectedRoute exact isProtected path="/Contact" component={About} />
+        <ConnectedRoute path="*" component={404} />
+
+      </Switch> 
         ) : (
           <div className="fx-margin Login"> Please Login</div>
         )}
-      </Switch>
     </>
   );
 }

@@ -18,22 +18,6 @@ function App() {
   }
   return (
     <div className="App">
-      <Parks />
-      {auth.loggedIn ? (
-        <div>
-          You are logged-in.
-          <br />
-          <button className="fx-margin" onClick={() => auth.logout()}>
-            Logout
-          </button>
-        </div>
-      ) : (
-        <div>
-          <button className="fx-margin" onClick={loginNow}>
-            Login Now
-          </button>
-        </div>
-      )}
       <Navigation />
     </div>
   );
