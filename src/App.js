@@ -1,4 +1,4 @@
-import Parks from "./components/parks/Parks";
+// import Parks from "./components/parks/Parks";
 import "./App.css";
 import React from "react";
 import { connect } from "react-redux";
